@@ -30,3 +30,5 @@ kubectl get svc openwebui
 ```
 
 Access your OpenWebUI at `http://<EXTERNAL-IP>:8080`.
+
+![](./screenshot.png)
