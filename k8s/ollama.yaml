@@ -1,0 +1,50 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ollama
+spec:
+  selector:
+    matchLabels:
+      name: ollama
+  template:
+    metadata:
+      labels:
+        name: ollama
+    spec:
+      containers:
+      - name: ollama
+        image: ollama/ollama:latest
+        env:
+          # keep models loaded forever
+          - name: OLLAMA_KEEP_ALIVE
+            value: "-1"
+        ports:
+        - name: http
+          containerPort: 11434
+          protocol: TCP
+        volumeMounts:
+        - name: ollama-data
+          mountPath: /root/.ollama
+  volumeClaimTemplates:
+  - metadata:
+      name: ollama-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 50Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama
+spec:
+  type: ClusterIP
+  selector:
+    name: ollama
+  ports:
+  - port: 80
+    name: http
+    targetPort: http
+    protocol: TCP

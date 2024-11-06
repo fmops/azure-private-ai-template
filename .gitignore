@@ -1,0 +1,13 @@
+.envrc
+.direnv/
+**/.terraform/
+**.tfstate*
+prod.tfvars
+**/kubeconfig
+
+# ignore sops easy edit temp files
+**.tmp.yaml
+
+# secrets
+*.agekey
+*.key
