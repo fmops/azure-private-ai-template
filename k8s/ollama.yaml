@@ -15,10 +15,6 @@ spec:
       containers:
       - name: ollama
         image: ollama/ollama:latest
-        env:
-          # keep models loaded forever
-          - name: OLLAMA_KEEP_ALIVE
-            value: "-1"
         ports:
         - name: http
           containerPort: 11434
