@@ -9,6 +9,9 @@
       let
         pkgs = import nixpkgs {
           inherit system;
+          config = {
+            allowUnfree = true;
+          };
         };
       in
       {
@@ -21,6 +24,8 @@
             fluxcd
             sops
             age
+            nodePackages.npm
+            google-chrome
           ];
         };
       }

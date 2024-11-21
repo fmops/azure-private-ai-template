@@ -35,7 +35,7 @@ https://linkedin.com/in/feynman
 
 # End Result
 
-![center](../screenshot.png)
+![center](./figures/screenshot.png)
 
 ---
 
@@ -116,6 +116,8 @@ https://github.com/fmops/azure-private-ai-template
 
 ---
 
+<!-- header: Image credits https://www.inspirisys.com/blog-details/Top-10-Open%CB%97Source-LLMs-of-2024-A-Complete-Guide/175 -->
+
 # Open Source LLM Landscape
 
 ![h:14cm center](./figures/Most-Popular-Open-Source-LLMs.png)
@@ -130,6 +132,8 @@ https://github.com/fmops/azure-private-ai-template
 - Phi-3: Microsoft's efficient small model -->
 
 ---
+
+<!-- header: "" -->
 
 # Ollama
 
@@ -158,9 +162,9 @@ https://github.com/fmops/azure-private-ai-template
 
 ![center](./figures/ollama-windows-07.webp)
 
-<!-- header: "" -->
-
 ---
+
+<!-- header: "" -->
 
 # Declarative Infrastructure with OpenTofu and Kubernetes
 
@@ -314,12 +318,14 @@ kubectl apply -f k8s/
 
 ---
 
+# Just kidding...
+
 ## Day 2 Operations
 
 - Logging: `kubectl logs`
+- Monitoring: Azure Monitor
 - Patching: `kubectl edit`
 - Scaling: `kubectl scale`
-- Monitoring: Azure Monitor
 - Disaster Recovery: VolumeSnapshots
 
 ---
