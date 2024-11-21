@@ -47,22 +47,3 @@ spec:
     name: http
     targetPort: http
     protocol: TCP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: open-webui
-  labels:
-    app: open-webui
-spec:
-  rules:
-  - host: diversitylabai.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: open-webui
-            port:
-              number: 8080
